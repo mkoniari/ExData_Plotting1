@@ -25,7 +25,6 @@ if (!file.exists(DATAFILE)) {
 dataCVS <- read.csv(DATAFILE, header=TRUE, sep=";",stringsAsFactors = FALSE)
 cols = c(3, 4, 5, 6, 7, 8, 9);    
 dataCVS[,cols] = apply(dataCVS[,cols], 2, function(x) as.numeric(x));
-na.omit
 dataALL <- tbl_df(na.omit(dataCVS)) 
 rm("dataCVS")
 PCdata <- 
